@@ -1,14 +1,16 @@
 import React from 'react'
 import {  Outlet, useNavigate } from 'react-router-dom'
-import { Container, Wrapper,Section, Logo,Link } from './style'
+import { Container, Wrapper,Section, Logo,Link, Main } from './style'
 import logoImg  from '../../assets/icons/logo.png'
 import { navbar } from '../../utils/navbar'
+import Button from '../Generic/Button'
 const Navbar = () => {
    
   const navigate = useNavigate()
 
   return (
     <Container>
+      <Main>
       <Wrapper>
         <Section onClick={()=>navigate('/home')} logo >
           <Logo src={logoImg} />
@@ -20,8 +22,9 @@ const Navbar = () => {
             })
           }
         </Section>
-        <Section><button>Sign In</button></Section>
+        <Section>ASDADSbcbnnbnvbnv</Section>
       </Wrapper>
+      </Main>
       <Outlet/>
     </Container>
   )

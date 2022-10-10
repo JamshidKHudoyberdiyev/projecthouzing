@@ -6,16 +6,21 @@ export const Container = styled.div`
  flex-direction: column;
  justify-content: center;
 `;
+export const Main = styled.div`
+ background-color: var(--bgColor);
+`;
 
 export const Wrapper = styled.div`
-  background-color: var(--bgColor);
-  color: #fff;
-  padding: 0 130px;
-  height: 64px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  color:#fff;
+  box-sizing: border-box;
+  padding: 0 130px;
   max-width: 1440px;
+  width: 100%;
+  align-items: center;
 `;
 
 export const Section = styled.div`
