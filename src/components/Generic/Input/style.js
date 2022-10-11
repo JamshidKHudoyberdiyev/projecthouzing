@@ -31,18 +31,16 @@ const getType = (x)=>{
   }
 }
 
-export const Container = styled.button`
+export const Container = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
   height: ${({height})=>height ? `${height}px` :"44px" };
-  width: ${({width})=>width ? `${width}px` :"130px" };
-  ${({type})=> getType(type)};
-  cursor: pointer;
+  width: ${({width})=>width ? `${width}px` :"100%" };
+/* ${({type})=> getType(type)}; */
   user-select:none;
   line-height:20px; 
   font-size:14px;
-  :active{
-    opacity: 0.7
-  }
+  outline:none;
+  border:1px solid #E6E9EC;
 `

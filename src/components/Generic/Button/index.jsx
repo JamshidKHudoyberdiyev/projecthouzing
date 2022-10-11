@@ -1,9 +1,11 @@
 import React from 'react'
 import { Container } from './style'
 
-const Button = () => {
+const Button = ({children,type,height,width,onclick}) => {
   return (
-    <Container height>Button</Container>
+    <Container  type={type} onClick={onclick}   height={height} width={width}>
+      {children|| "genric button"}
+    </Container>
   )
 }
 

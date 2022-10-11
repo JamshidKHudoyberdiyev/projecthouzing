@@ -8,6 +8,8 @@ const Navbar = () => {
    
   const navigate = useNavigate()
 
+ 
+
   return (
     <Container>
       <Main>
@@ -17,12 +19,14 @@ const Navbar = () => {
         </Section>
         <Section>
           {
-            navbar.map(({title,path},index)=>{
-              return <Link className={(isActive)=>isActive && 'active'}  key={index}  to={path}>{title}</Link>
+            navbar.map(({title,path,hidden},index)=>{
+              return !hidden && <Link className={(isActive)=>isActive && 'active'}  key={index}  to={path}>{title}</Link>
             })
           }
         </Section>
-        <Section>ASDADSbcbnnbnvbnv</Section>
+        <Section>
+          <Button type={"dark"} onclick={()=>{navigate('/signin')}} >Sign in</Button>
+        </Section>
       </Wrapper>
       </Main>
       <Outlet/>

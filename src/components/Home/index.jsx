@@ -1,10 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import {Input,Button} from '../Generic'
+
 
 const Home = () => {
   return (
     <div>Home
-      <Outlet/>
+      <Button>salom</Button>
+      <Input placeholder={"salom"}/>
     </div>
   )
 }
