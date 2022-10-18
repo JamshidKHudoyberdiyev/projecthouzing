@@ -1,6 +1,5 @@
 import React from 'react'
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
-import Home from '../components/Home'
 import Navbar from '../components/Navbar'
 import RootContext from '../contex'
 import { navbar } from '../utils/navbar'

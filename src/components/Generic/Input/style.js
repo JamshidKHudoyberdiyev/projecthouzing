@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+// import {ReactComponent as house} from '../../assets/icons/FilterHome.svg'
 
 const getType = (x)=>{
   
@@ -35,12 +35,30 @@ export const Container = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${({height})=>height ? `${height}px` :"44px" };
-  width: ${({width})=>width ? `${width}px` :"100%" };
+  /* width: ${({width})=>width ? `${width}px` :"100%" };  */
 /* ${({type})=> getType(type)}; */
   user-select:none;
-  line-height:20px; 
+  /* line-height:20px;  */
   font-size:14px;
   outline:none;
-  border:1px solid #E6E9EC;
+  border:none;
+  width:100%;
 `
+
+export const InputWrapper = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width: ${({width})=>width ? `${width}px` :"100%" };
+border:1px solid #E6E9EC;
+height: ${({height})=>height ? `${height}px` :"44px" };
+`
+
+
+export const Icon = styled.div`
+display: flex;
+justify-content:center;
+align-items: center;
+padding-left:16px ;
+`
+

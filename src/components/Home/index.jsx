@@ -1,13 +1,15 @@
 import React from 'react'
-import {Input,Button} from '../Generic'
+import Filter from '../Filter'
+// import {Input,Button} from '../Generic'
+import { Container } from './style'
 
 
 const Home = () => {
   return (
-    <div>Home
-      <Button>salom</Button>
-      <Input placeholder={"salom"}/>
-    </div>
+    <Container>
+      <h1>Home</h1>
+      <Filter/>
+    </Container>
   )
 }
 
