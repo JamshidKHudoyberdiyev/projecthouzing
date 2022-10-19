@@ -28,7 +28,7 @@ const Input = forwardRef(({
          defaultValue={defaultValue}
          width={width}
          ref={ref}/>
-  
+
     </InputWrapper>
   )
 })

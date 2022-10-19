@@ -9,7 +9,7 @@ import {ReactComponent as search} from '../../assets/icons/SearchIcon.svg'
 export const Container = styled.div`
 display: flex;
 gap: 20px;
-padding: 0 130px;
+padding: 10px 130px;
 `
 
 export const Icon =styled.div``;
