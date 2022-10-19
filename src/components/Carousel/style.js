@@ -49,7 +49,7 @@ flex-direction: column;
 align-items: center;
 `;
 
-const Content_Title=styled.div`
+const ContentTitle=styled.div`
  font-family: 'Montserrat';
  font-style: normal;
  font-weight: 700;
@@ -59,7 +59,7 @@ const Content_Title=styled.div`
  color: #FFFFFF;
 `;
 
-const Content_info = styled.div`
+const ContentInfo = styled.div`
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 400;
@@ -67,4 +67,4 @@ font-size: 16px;
 line-height: 24px;
 color: #FFFFFF;
 `;
-export {Container,Img,Arrow,Blur,Content,Content_Title,Content_info}
+export {Container,Img,Arrow,Blur,Content,ContentTitle,ContentInfo}

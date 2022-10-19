@@ -26,11 +26,11 @@ export const Card = styled.div`
 
 
 
-export const Card_img = styled.div`
+export const CardImg = styled.div`
  width: 100%;
 `;
 
-export const Card_info = styled.div`
+export const CardInfo = styled.div`
 display: flex;
 flex-direction: column;
 gap: 20px;

@@ -1,4 +1,4 @@
-import { Card, Card_img, Card_info, Info, Rooms, Icon, Price } from "./style";
+import { Card,  CardImg, CardInfo, Info, Rooms, Icon, Price } from "./style";
 import React from "react";
 import noimg from '../../assets/imgs/images.jfif'
 
@@ -12,10 +12,10 @@ const HouseCard = ({info,mr,mt,mb,ml}) => {
     ml = {ml}
     >
     
-      <Card_img>
+      <CardImg>
         <img src={noimg} alt="img" />
-      </Card_img>
-      <Card_info>
+      </CardImg>
+      <CardInfo>
         <Info.Header>
           <Info.Title>{info?.name} Category:{info?.category?.name}</Info.Title>
           <Info.Text>{info?.address} <br /> Category:{info?.category?.name}</Info.Text>
@@ -48,7 +48,7 @@ const HouseCard = ({info,mr,mt,mb,ml}) => {
             <Icon.heart/>
           </Info.Footer.Icons>
         </Info.Footer>
-      </Card_info>
+      </CardInfo>
     </Card>
   );
 };
