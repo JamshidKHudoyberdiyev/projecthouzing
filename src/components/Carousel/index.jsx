@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Carousel } from 'antd';
-import { Container,Img,Arrow, Blur,Content, Content_Title, Content_info} from './style';
+import { Container,Img,Arrow, Blur,Content, ContentTitle, ContentInfo} from './style';
 import img1 from '../../assets/imgs/img1.png'
 import img2 from '../../assets/imgs/img2.png'
 
@@ -25,8 +25,8 @@ const CarouselAnt = () => {
         </Carousel>
         <Blur/>
         <Content>
-          <Content_Title>Skyper Pool Partment</Content_Title>
-          <Content_info>112 Glenwood Ave Hyde Park, Boston, MA</Content_info>
+          <ContentTitle>Skyper Pool Partment</ContentTitle>
+          <ContentInfo>112 Glenwood Ave Hyde Park, Boston, MA</ContentInfo>
         </Content>
         <Arrow onClick={onMovie} data-name="left" chap={"true"} />
         <Arrow onClick={onMovie} data-name="right" />
