@@ -15,3 +15,21 @@ body{
     --primaryColor:#0061DF;
     --bgColor:#0D153B;
 }
+
+.title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0D263B;
+    font-family: 'Montserrat';
+
+}
+.subTitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #696969;
+    font-family: 'Montserrat';
+}
