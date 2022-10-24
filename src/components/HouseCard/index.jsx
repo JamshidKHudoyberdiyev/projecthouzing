@@ -1,55 +1,62 @@
-import { Card,  CardImg, CardInfo, Info, Rooms, Icon, Price } from "./style";
-import React from "react";
-import noimg from '../../assets/imgs/images.jfif'
+import { Container, Content, Details, Img, Icons, Divider } from './style';
+import noimg from '../../assets/imgs/img3.png';
 
-const HouseCard = ({info,mr,mt,mb,ml}) => {
-  // console.log(info);
+export const HouseCard = ({ data = {}, gap, onClick }) => {
+  const {
+    attachments,
+    salePrice,
+    price,
+    houseDetails,
+    address,
+    city,
+    country,
+    description,
+    category,
+  } = data;
   return (
-    <Card 
-    mr = {mr}
-    mt = {mt}
-    mb = {mb}
-    ml = {ml}
-    >
-    
-      <CardImg>
-        <img src={noimg} alt="img" />
-      </CardImg>
-      <CardInfo>
-        <Info.Header>
-          <Info.Title>{info?.name} Category:{info?.category?.name}</Info.Title>
-          <Info.Text>{info?.address} <br /> Category:{info?.category?.name}</Info.Text>
-        </Info.Header>
-        <Rooms>
-          <Rooms.Item> 
-            <Icon.bed />
-            <Rooms.Info>{info?.houseDetails.beds || 0} Beds</Rooms.Info>
-          </Rooms.Item>
-          <Rooms.Item> 
-            <Icon.bath />
-            <Rooms.Info>{info?.houseDetails.bath || 0} Baths</Rooms.Info>
-          </Rooms.Item>
-          <Rooms.Item> 
-            <Icon.car />
-            <Rooms.Info>{info?.houseDetails.garage || 0} Garage</Rooms.Info>
-          </Rooms.Item>
-          <Rooms.Item> 
-            <Icon.ruler />
-            <Rooms.Info>{info?.houseDetails.area || 0}  Sq Ft</Rooms.Info>
-          </Rooms.Item>
-        </Rooms>
-        <Info.Footer>
-          <Price>
-              <Price.Old>${info?.price||0}/month</Price.Old>
-              <Price.Next>${info?.salePrice||0}/month</Price.Next>
-          </Price>
-          <Info.Footer.Icons>
-            <Icon.resize/>
-            <Icon.heart/>
-          </Info.Footer.Icons>
-        </Info.Footer>
-      </CardInfo>
-    </Card>
+    <div style={{ display: 'flex' }} onClick={onClick}>
+      <Container gap={gap}>
+        <Img src={attachments?.imgPath || noimg} />
+        <Content>
+          <div className='subTitle inline'>
+            {city}, {country}, {description}
+          </div>
+          <div className='info'>
+            {address || 'Quincy St, Brooklyn, NY, USA'} -{' '}
+            {category?.name || 'Category'} {houseDetails?.room || 0}-rooms
+          </div>
+          <Details>
+            <Details.Item>
+              <Icons.Bed />
+              <div className='info'>Bed {houseDetails?.beds || 0}</div>
+            </Details.Item>
+            <Details.Item>
+              <Icons.Bath />
+              <div className='info'>Bath {houseDetails?.bath || 0}</div>
+            </Details.Item>
+            <Details.Item>
+              <Icons.Garage />
+              <div className='info'>Garage {houseDetails?.garage || 0} </div>
+            </Details.Item>
+            <Details.Item>
+              <Icons.Ruler />
+              <div className='info'>Area {houseDetails?.area || 0}kv</div>
+            </Details.Item>
+          </Details>
+        </Content>
+        <Divider />
+        <Content footer>
+          <Details.Item footer>
+            <div className='info'>${salePrice || 0}/mo</div>
+            <div className='subTitle'>${price || 0}/mo</div>
+          </Details.Item>
+          <Details.Item row>
+            <Icons.Resize />
+            <Icons.Love />
+          </Details.Item>
+        </Content>
+      </Container>
+    </div>
   );
 };
 

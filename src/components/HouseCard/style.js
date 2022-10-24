@@ -1,166 +1,80 @@
 import styled from 'styled-components';
 import { ReactComponent as bed } from '../../assets/icons/bed.svg';
 import { ReactComponent as bath } from '../../assets/icons/bath.svg';
-import { ReactComponent as car} from '../../assets/icons/car.svg';
+import { ReactComponent as garage } from '../../assets/icons/car.svg';
 import { ReactComponent as ruler } from '../../assets/icons/ruler.svg';
-import { ReactComponent as resize } from '../../assets/icons/1.svg';
-import { ReactComponent as heart } from '../../assets/icons/3.svg';
+import { ReactComponent as love } from '../../assets/icons/love.svg';
+import { ReactComponent as resize } from '../../assets/icons/ruler.svg';
 
-
-export const Card = styled.div`
- margin-right:${props=>props.mr}px;
- margin-top:${props=>props.mt}px;
- margin-left:${props=>props.ml}px;
- margin-bottom:${props=>props.mb}px;
- transition: all 0.2s ease;
- /* height: 429px; */
- min-width: 250px;
- width: 380px;
- border-radius: 3px;
- border: 1px solid #E6E9EC;
- :hover{
-  box-shadow: 2px 2px 10px 2px #E6E9EC;
-  transform: scale(1.0095);
- }
+const Container = styled.div`
+  width: 100%;
+  max-width: 380px;
+  min-width: 330px;
+  margin: ${({ gap }) => {
+    return gap && `0 ${gap}px`;
+  }};
+  height: 430px;
+  background: white;
+  border: 1px solid #e6e9ec;
+  :hover {
+    filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
+  }
+  cursor: pointer;
 `;
 
-
-
-export const CardImg = styled.div`
- width: 100%;
+const Img = styled.img`
+  width: 100%;
+  max-height: 220px;
+  min-height: 200px;
 `;
 
-export const CardInfo = styled.div`
-display: flex;
-flex-direction: column;
-gap: 20px;
-`;
-
-export const Info =styled.div`
-
-`;
-
-Info.Header =styled.div`
- display: flex;
- flex-direction: column;
- gap: 5px;
- padding: 20px 20px 0 ;
-`
-
-Info.Title = styled.div`
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #0D263B;
-  /* display: flex;
-  flex-direction: column; */
-`;
-
-Info.Text = styled.div`
- font-family: 'Montserrat';
- font-style: normal;
- font-weight: 400;
- font-size: 14px;
- line-height: 20px;
- color: #696969;
-`;
-
-export const Rooms =styled.div`
+const Content = styled.div`
   display: flex;
-  align-items: center;
-  gap: 30px;
-  padding:0 20px;
+  flex-direction: ${({ footer }) => (footer ? 'row' : 'column')};
+  justify-content: ${({ footer }) => footer && 'space-between'};
+  padding-top: 24px;
+  padding: 16px 20px;
+  background: white;
+`;
+const Details = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
 `;
 
-Rooms.Item=styled.div`
+Details.Item = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: ${({ row }) => (row ? 'row' : 'column')};
+  align-items: ${({ footer }) => !footer && 'center'};
 `;
 
-Rooms.Info = styled.div`
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #696969;
+const Icons = styled.div``;
+
+Icons.Bed = styled(bed)``;
+Icons.Bath = styled(bath)``;
+Icons.Garage = styled(garage)``;
+Icons.Ruler = styled(ruler)``;
+Icons.Resize = styled(resize)``;
+Icons.Love = styled(love)`
+  width: 27px;
+  height: 27px;
+  padding: 6px;
+  background: #f6f8f9;
+  border-radius: 50%;
+  margin-left: 20px;
+  cursor: pointer;
+  :active {
+    transform: scale(0.9);
+  }
 `;
 
-
-//! Icons
-export const Icon = styled.div`
-
-
-`;
-Icon.bed = styled(bed)`
-
-`;
-Icon.bath = styled(bath)`
-
-`;
-Icon.car = styled(car)`
-
-`;
-Icon.ruler = styled(ruler)`
-
+const Divider = styled.div`
+  background: #e6e9ec;
+  height: 1px;
+  width: 100%;
 `;
 
-Icon.resize = styled(resize)`
-
-`;
-Icon.heart = styled(heart )`
-
-`;
-
-Info.Footer =styled.div`
- display: flex; 
- 
- justify-content: space-between;
- align-items: center;
- border-top: 1px solid #E6E9EC ;
- padding-top: 8px;
- padding: 8px 20px  8px  0;
-`;
-
-// price
-export const Price = styled.div`
- display: flex;
- flex-direction: column;
- padding-left: 20px;
-`;
-
-Price.Old = styled.div`
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 20px;
-text-decoration: line-through;
-`;
-
-Price.Next = styled.div`
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-color: #0D263B;
-`;
-
-Info.Footer.Icons = styled.div`
- display: flex;
- gap: 20px;
- align-items: center;
- justify-content: center;
- 
-`;
-
-
-
-
+export { Container, Img, Content, Details, Icons, Divider };

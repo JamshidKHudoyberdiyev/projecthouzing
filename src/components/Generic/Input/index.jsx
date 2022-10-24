@@ -8,7 +8,7 @@ const Input = forwardRef(({
   width,
   icon,
   type,
-  Onchange,
+  onChange,
   placeholder,
   name,
   defaultValue,
@@ -22,7 +22,7 @@ const Input = forwardRef(({
          placeholder={placeholder} 
          name={name}   
          type={type} 
-         Onchange={Onchange}   
+         onChange={onChange}   
          height={height} 
          value={value}
          defaultValue={defaultValue}
