@@ -1,6 +1,7 @@
 import React from 'react'
 import CarouselAnt from '../Carousel'
-import CategoryCard from '../CategoryCard'
+import Category from '../Category'
+
 import Filter from '../Filter'
 import HouseCard from '../HouseCard'
 
@@ -13,7 +14,7 @@ const Home = () => {
       <Filter/>
       <CarouselAnt/>
       <HouseCard/>
-      <CategoryCard/>
+      <Category/>
     </Container>
   )
 }

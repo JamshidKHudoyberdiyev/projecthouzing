@@ -33,3 +33,8 @@ body{
     color: #696969;
     font-family: 'Montserrat';
 }
+
+.slick-next:before, .slick-prev:before{
+    color: black!important ;
+    
+}

@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
-// import { uzeReapleace } from '../../hooks/useReplace';
+
 import Filter from '../Filter';
-
-
-
 import HouseCard from '../HouseCard';
-
 import { Container } from './style'
+
 
 const {REACT_APP_BASE_URL:url} = process.env;
 
+
 const Proporties = () => {
 
-
+  
   const {search} = useLocation()
-  console.log(search);
   
 
-  // console.log(uzeReapleace("salm","sal"))
   const [data,setData] = useState([])
  
   useEffect(()=>{

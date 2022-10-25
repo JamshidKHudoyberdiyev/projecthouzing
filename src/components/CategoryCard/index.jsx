@@ -3,13 +3,11 @@ import noimg from '../../assets/imgs/img3.png';
 import categoryimg from '../../assets/imgs/category.png'
 import { Blur } from './style';
 
-export const CategoryCard = ({ data = {}, gap, onClick }) => {
-  const {
-    category,
-  } = data;
+export const CategoryCard = ({ category, onClick }) => {
+ 
   return (
 
-      <Container gap={gap}>
+      <Container  onClick={onClick}>
         <Img src={ categoryimg || noimg} />
       <Blur/>
         <Content>
